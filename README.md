@@ -34,8 +34,7 @@ The podcast episodes can be hosted on platforms like:
 - Expanding topic coverage beyond OptimusLogic
 
 ## Contributors
-- [Your Name]
-- AI-powered content generation tools
+- [Aditya SInha]
 
 ## License
 This project is open-source and available under the MIT License.
