@@ -9,10 +9,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: List Files
-        run: ls -lh
+      - name: List Files (Debugging)
+        run: ls -lh  # This will show all files in the repo
 
-      - name: Convert MP3 to WAV (Example)
+      - name: Verify Podcast File Exists
         run: |
-          sudo apt update && sudo apt install ffmpeg -y
-          ffmpeg -i my-podcast.mp3 my-podcast.wav
+          if [ -f "download.mp3" ]; then
+            echo "Podcast file found!"
+          else
+            echo "Podcast file NOT found! Check if it's uploaded."
+            exit 1
+          fi
+
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install ffmpeg -y
+
+      - name: Convert MP3 to WAV
+        run: ffmpeg -i my-podcast.mp3 my-podcast.wav
