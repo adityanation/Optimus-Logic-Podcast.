@@ -1,0 +1,18 @@
+name: Process Podcast
+
+on: [push]
+
+jobs:
+  process-podcast:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: List Files
+        run: ls -lh
+
+      - name: Convert MP3 to WAV (Example)
+        run: |
+          sudo apt update && sudo apt install ffmpeg -y
+          ffmpeg -i my-podcast.mp3 my-podcast.wav
