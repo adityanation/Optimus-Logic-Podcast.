@@ -1,0 +1,2 @@
+- name: Convert MP3 to WAV
+  run: ffmpeg -i .github/workflows/download.mp3 path/to/download.wav
