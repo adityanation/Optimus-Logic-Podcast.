@@ -32,5 +32,11 @@ The podcast episodes can be hosted on platforms like:
 - Automating the entire pipeline from script generation to publishing
 - Implementing a chatbot for user interactions related to podcast topics
 - Expanding topic coverage beyond OptimusLogic
+## Contributors
+- [Aditya SInha]
+
+## License
+This project is open-source and available under the MIT License.
+
 
 
